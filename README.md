@@ -216,14 +216,14 @@ safe recovery
 
 <div align="center">
 
-### Build the system. Break the assumptions. Understand the failure.
 
-**Open to Platform/DevOps, Observability/APM and Java Backend roles — Hanoi or remote.**
+
+
 
 <a href="mailto:huyhoang59204@gmail.com">
   <img src="https://img.shields.io/badge/Email-huyhoang59204%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
 </a>
 
-<sub>Hanoi, Vietnam · Banking & financial-services platform and APM work welcome.</sub>
+<sub></sub>
 
 </div>
