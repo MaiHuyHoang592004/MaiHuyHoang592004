@@ -2,9 +2,9 @@
 
 # Mai Huy Hoang
 
-### Software Engineer · Java Backend · Fullstack · Platform/Observability
+### Software Engineer · Java Backend · Production Systems
 
-**I build backend-heavy products end-to-end, then operate and troubleshoot them in production.**
+**I build product features end-to-end, then deploy, operate and troubleshoot them in production.**
 
 <p>
   <a href="https://github.com/MaiHuyHoang592004/corebank-api">
@@ -20,11 +20,10 @@
 
 <p>
   <img src="https://img.shields.io/badge/Hanoi,%20Vietnam-informational?style=flat-square&logo=googlemaps&logoColor=white" alt="Hanoi, Vietnam" />
-  <img src="https://img.shields.io/badge/Open%20to-Java%20Backend%20%C2%B7%20Fullstack%20%C2%B7%20Platform%2FAPM-success?style=flat-square" alt="Open to Java backend, fullstack and platform/APM roles" />
   <img src="https://img.shields.io/badge/Domain-Banking%20%26%20Financial%20Services-blueviolet?style=flat-square" alt="Banking and financial services" />
 </p>
 
-`Java 17` · `Spring Boot` · `TypeScript` · `Next.js` · `PostgreSQL` · `Kubernetes` · `OpenShift` · `OpenTelemetry` · `Dynatrace` · `Cloudflare Workers/D1`
+`Java 17` · `Spring Boot` · `TypeScript` · `Next.js` · `PostgreSQL` · `Docker` · `Kubernetes` · `OpenTelemetry`
 
 </div>
 
@@ -32,7 +31,7 @@
 
 ## In one paragraph
 
-Software engineer with a strong **Java backend** foundation and hands-on **production operations** experience. I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and built a **financial reconciliation platform** together with the accounting team. I also build end-to-end product workflows with **Spring Boot + Next.js / React / TypeScript**, while owning releases, database migrations and runtime troubleshooting. On the platform side, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repositories.
+Software engineer with a strong **Java backend** foundation and hands-on experience taking product work from business requirements to production. I have maintained and extended an internal fulfillment platform, built a **financial reconciliation platform** with the accounting team, and delivered end-to-end product flows with **Spring Boot + Next.js / React / TypeScript**. I also own releases, database migrations and runtime troubleshooting, with additional hands-on work in Kubernetes, OpenShift and observability.
 
 ---
 
