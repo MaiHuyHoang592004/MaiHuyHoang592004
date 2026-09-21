@@ -2,9 +2,9 @@
 
 # Mai Huy Hoang
 
-### Software Engineer · Java Backend · Platform/DevOps · Observability/APM
+### Software Engineer · Java Backend · Fullstack · Platform/Observability
 
-**I ship backend systems, then operate them — deployments, migrations, incidents, and the traces that explain them.**
+**I build backend-heavy products end-to-end, then operate and troubleshoot them in production.**
 
 <p>
   <a href="https://github.com/MaiHuyHoang592004/corebank-api">
@@ -20,11 +20,11 @@
 
 <p>
   <img src="https://img.shields.io/badge/Hanoi,%20Vietnam-informational?style=flat-square&logo=googlemaps&logoColor=white" alt="Hanoi, Vietnam" />
-  <img src="https://img.shields.io/badge/Open%20to-Platform%20%C2%B7%20APM%20%C2%B7%20Java%20Backend-success?style=flat-square" alt="Open to platform, APM and Java backend roles" />
+  <img src="https://img.shields.io/badge/Open%20to-Java%20Backend%20%C2%B7%20Fullstack%20%C2%B7%20Platform%2FAPM-success?style=flat-square" alt="Open to Java backend, fullstack and platform/APM roles" />
   <img src="https://img.shields.io/badge/Domain-Banking%20%26%20Financial%20Services-blueviolet?style=flat-square" alt="Banking and financial services" />
 </p>
 
-`Java 17` · `Spring Boot` · `PostgreSQL` · `Kubernetes` · `OpenShift` · `Istio` · `OpenTelemetry` · `Dynatrace` · `Kafka` · `Cloudflare Workers/D1`
+`Java 17` · `Spring Boot` · `TypeScript` · `Next.js` · `PostgreSQL` · `Kubernetes` · `OpenShift` · `OpenTelemetry` · `Dynatrace` · `Cloudflare Workers/D1`
 
 </div>
 
@@ -32,7 +32,7 @@
 
 ## In one paragraph
 
-Software engineer with hands-on **production operations** experience on two internal systems: I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and I built a **financial reconciliation platform** together with the accounting team. I own releases, database migrations and runtime troubleshooting across managed hosting and **Cloudflare Workers + D1**. On top of that, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repository 
+Software engineer with a strong **Java backend** foundation and hands-on **production operations** experience. I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and built a **financial reconciliation platform** together with the accounting team. I also build end-to-end product workflows with **Spring Boot + Next.js / React / TypeScript**, while owning releases, database migrations and runtime troubleshooting. On the platform side, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repositories.
 
 ---
 
@@ -179,9 +179,9 @@ Availability, booking, payment and trip workflows treated as stateful business p
 <img src="https://img.shields.io/badge/Tempo-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Tempo" />
 <img src="https://img.shields.io/badge/Micrometer-117AC9?style=flat-square" alt="Micrometer" />
 
-**Backend & Data**
+**Application & Data**
 
-<img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,ts,nextjs" alt="Backend and data stack" />
+<img src="https://skillicons.dev/icons?i=java,spring,ts,nextjs,react,postgres,mysql,redis" alt="Application and data stack" />
 <br />
 <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka" />
 <img src="https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white" alt="Flyway" />
