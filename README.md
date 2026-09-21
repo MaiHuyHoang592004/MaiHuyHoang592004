@@ -2,7 +2,7 @@
 
 # Mai Huy Hoang
 
-### Backend / Product Engineer
+### Software Engineer · Java Backend · Platform/DevOps · Observability/APM
 
 **I build transactional systems where correctness, concurrency, and failure behavior matter.**
 
@@ -18,7 +18,7 @@
   </a>
 </p>
 
-`Java` · `Spring Boot` · `PostgreSQL` · `Redis` · `Kafka` · `Docker` · `Kubernetes`
+`Java` · `Spring Boot` · `PostgreSQL` · `Redis` · `Kafka` · `Docker` · `Kubernetes` · `OpenShift` · `OpenTelemetry` · `Dynatrace`
 
 </div>
 
@@ -53,12 +53,13 @@ A production-oriented core-banking backend built around PostgreSQL as the source
 - Concurrency-safe transfers
 - Transactional outbox
 - Reconciliation & break detection
-- Maker-checker approvals
 - Runtime operational controls
+- OpenShift restricted-v2 deployment
+- Dynatrace incident RCA
 
 **Stack**
 
-`Java 17` `Spring Boot` `PostgreSQL` `Kafka` `Redis` `Testcontainers`
+`Java 17` `Spring Boot` `PostgreSQL` `Kafka` `Kubernetes` `OpenShift` `Istio` `OpenTelemetry` `Dynatrace`
 
 <p>
   <a href="https://github.com/MaiHuyHoang592004/corebank-api"><strong>Repository →</strong></a>
@@ -111,17 +112,19 @@ A full-stack product where availability, booking, payment, and trip workflows ar
 
 ---
 
-## Current focus
+## Verified platform work
 
 ```text
-CoreBank
-  ├─ Kubernetes / OpenShift deployment
-  ├─ OpenTelemetry + APM
-  ├─ incident diagnosis & operational runbooks
-  └─ production-oriented failure testing
+CoreBank — runtime-verified, with evidence in the repo
+  ├─ OpenShift (Developer Sandbox) under restricted-v2 · Route · HPA · rollback
+  ├─ Kubernetes on Kind · probes · PDB · rolling update · failed-rollout recovery
+  ├─ OpenTelemetry → Dynatrace · JDBC spans · 45 s row-lock RCA
+  └─ Istio 1.31 · canary · STRICT mTLS · rollback
+
+Next: Dynatrace Operator (DynaKube) · OpenShift Service Mesh · NetworkPolicy
 ```
 
-I'm deliberately strengthening the boundary between **writing backend code** and **operating it under real failure conditions**.
+Every item above was executed against a live cluster and captured in the repository — not read about.
 
 ---
 
@@ -141,6 +144,8 @@ I'm deliberately strengthening the boundary between **writing backend code** and
 
 <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
 <img src="https://img.shields.io/badge/OpenShift-EE0000?style=flat-square&logo=redhatopenshift&logoColor=white" alt="OpenShift" />
+<img src="https://img.shields.io/badge/Dynatrace-1496FF?style=flat-square&logo=dynatrace&logoColor=white" alt="Dynatrace" />
+<img src="https://img.shields.io/badge/Istio-466BB0?style=flat-square&logo=istio&logoColor=white" alt="Istio" />
 <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka" />
 <img src="https://img.shields.io/badge/Testcontainers-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Testcontainers" />
 
@@ -174,6 +179,6 @@ safe recovery
 
 ### Build the system. Break the assumptions. Understand the failure.
 
-<sub>Hanoi, Vietnam · Open to backend, product engineering, observability and platform-oriented software roles.</sub>
+<sub>Hanoi, Vietnam · Open to observability/APM, platform &amp; DevOps, and Java backend engineering roles.</sub>
 
 </div>
