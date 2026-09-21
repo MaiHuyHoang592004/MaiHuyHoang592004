@@ -4,33 +4,76 @@
 
 ### Software Engineer · Java Backend · Platform/DevOps · Observability/APM
 
-**I build transactional systems where correctness, concurrency, and failure behavior matter.**
+**I ship backend systems, then operate them — deployments, migrations, incidents, and the traces that explain them.**
 
 <p>
   <a href="https://github.com/MaiHuyHoang592004/corebank-api">
-    <img src="https://img.shields.io/badge/CoreBank-181717?style=for-the-badge&logo=github&logoColor=white" alt="CoreBank" />
+    <img src="https://img.shields.io/badge/CoreBank-Platform%20%26%20APM%20lab-181717?style=for-the-badge&logo=github&logoColor=white" alt="CoreBank repository" />
   </a>
   <a href="https://corebank-api-acv7.onrender.com">
-    <img src="https://img.shields.io/badge/Live%20Demo-0F9D58?style=for-the-badge&logo=render&logoColor=white" alt="CoreBank live demo" />
+    <img src="https://img.shields.io/badge/Live%20demo-online-0F9D58?style=for-the-badge&logo=render&logoColor=white" alt="CoreBank live demo" />
   </a>
   <a href="https://github.com/MaiHuyHoang592004/Car-Rental">
-    <img src="https://img.shields.io/badge/RentFlow-181717?style=for-the-badge&logo=github&logoColor=white" alt="RentFlow" />
+    <img src="https://img.shields.io/badge/RentFlow-Booking%20platform-181717?style=for-the-badge&logo=github&logoColor=white" alt="RentFlow repository" />
   </a>
 </p>
 
-`Java` · `Spring Boot` · `PostgreSQL` · `Redis` · `Kafka` · `Docker` · `Kubernetes` · `OpenShift` · `OpenTelemetry` · `Dynatrace`
+<p>
+  <img src="https://img.shields.io/badge/Hanoi,%20Vietnam-informational?style=flat-square&logo=googlemaps&logoColor=white" alt="Hanoi, Vietnam" />
+  <img src="https://img.shields.io/badge/Open%20to-Platform%20%C2%B7%20APM%20%C2%B7%20Java%20Backend-success?style=flat-square" alt="Open to platform, APM and Java backend roles" />
+  <img src="https://img.shields.io/badge/Domain-Banking%20%26%20Financial%20Services-blueviolet?style=flat-square" alt="Banking and financial services" />
+</p>
+
+`Java 17` · `Spring Boot` · `PostgreSQL` · `Kubernetes` · `OpenShift` · `Istio` · `OpenTelemetry` · `Dynatrace` · `Kafka` · `Cloudflare Workers/D1`
 
 </div>
 
 ---
 
-## About
+## In one paragraph
 
-I'm a backend-focused engineer who likes the parts of software that become interesting **after the happy path stops working**.
+Software engineer with hands-on **production operations** experience on two internal systems: I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and I built a **financial reconciliation platform** together with the accounting team. I own releases, database migrations and runtime troubleshooting across managed hosting and **Cloudflare Workers + D1**. On top of that, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repository — and I'm looking to deliver container-platform and APM solutions for **banking and financial-services** clients.
 
-I care about financial correctness, transactional workflows, concurrency, idempotency, failure recovery, observability, and building product flows that remain understandable as the system grows.
+---
 
-My current direction sits at the intersection of **backend engineering, production reliability, and product systems**.
+## Experience
+
+### Software Engineer — OP Creative · Fulfillment & Print-on-Demand
+`05/2026 – 09/2026` · Hanoi, Vietnam
+
+- **Production operations / DevOps** — day-to-day deployments and runtime support for two internal systems: the fulfillment platform on managed hosting and the reconciliation platform on **Cloudflare Workers + D1**. Releases, database migrations, production troubleshooting.
+- **Fulfillment Operations Platform** — took over a system built by an outsourced team: maintained the codebase, customized workflows and shipped features for production processes across multiple workshops; supported automated artwork-processing and print-dispatch runners.
+- **Payment & Reconciliation Hub** — built together with accounting: consolidated transaction data from multiple financial and commerce sources and attributed incoming funds to the correct customer/seller accounts.
+- **Reconciliation correctness** — verification and exception-handling workflows for **ambiguous, duplicate and pending-to-posted** payments; investigated excessive **Cloudflare D1 row reads** and other production issues affecting financial operations.
+
+### Java Backend Intern — FPT Software Academy
+`04/2025 – 08/2025`
+
+- Mentor-reviewed Java / Spring Boot training: OOP, SQL, REST APIs, Git, unit testing, relational database design.
+- Built backend features in team projects, designed REST endpoints and database schemas, took part in code reviews.
+
+---
+
+## Verified platform & APM work
+
+> Everything below was executed against a live cluster and captured in the [CoreBank repository](https://github.com/MaiHuyHoang592004/corebank-api) — not read about.
+
+```text
+Same banking workload, two platforms — Kind and Red Hat OpenShift Developer Sandbox
+  ├─ OpenShift · restricted-v2, platform-assigned UID, no anyuid / SCC bypass
+  ├─ Self-healing · DB readiness & liveness behavior · HPA · rolling update · rollback
+  ├─ OpenTelemetry Collector → Dynatrace · HTTP/JDBC traces · Hikari & banking metrics
+  └─ Istio 1.31 (upstream, on Kind) · canary routing · STRICT mTLS · rollback
+```
+
+| Evidence | What it demonstrates |
+|---|---|
+| **3,899 committed journals = 3,899 HTTP server spans = 3,899 posted-journal metric increments** (on OpenShift) | Telemetry reconciles exactly with the ledger — traces and metrics can be trusted as financial evidence |
+| **45 s PostgreSQL row-lock incident, induced and root-caused** | Correlated Dynatrace traces, JDBC acquisition events, Hikari metrics and PostgreSQL wait evidence to separate **lock contention** from **pool wait** and **slow SQL** |
+| **PostgreSQL connection exhaustion at HPA scale-out** | A runtime-only defect invisible in unit tests; fixed and locked down with a **CI connection-budget guard** |
+| **Operations runbook · proposed SLOs · end-to-end platform/APM POC document** | Operable by someone other than the author |
+
+**Next:** Dynatrace Operator (DynaKube) · OpenShift Service Mesh · NetworkPolicy
 
 ---
 
@@ -41,21 +84,23 @@ My current direction sits at the intersection of **backend engineering, producti
 <td width="50%" valign="top">
 
 ### 🏦 CoreBank
+**Banking reliability & platform engineering lab.**
 
-**Financial correctness under retries, concurrency, and partial failure.**
+A core-banking workload built to be *operated*: PostgreSQL is the source of truth for money, and every platform claim is verified at runtime.
 
-A production-oriented core-banking backend built around PostgreSQL as the source of truth for money.
-
-**Engineering focus**
+**Banking domain**
 - Double-entry ledger
-- Hold / capture / void payment lifecycle
+- Hold / capture / void lifecycle
 - Idempotent money commands
 - Concurrency-safe transfers
 - Transactional outbox
 - Reconciliation & break detection
-- Runtime operational controls
-- OpenShift restricted-v2 deployment
-- Dynatrace incident RCA
+
+**Platform & observability**
+- OpenShift under `restricted-v2`
+- HPA · rolling update · rollback
+- OpenTelemetry → Dynatrace
+- Incident RCA with trace evidence
 
 **Stack**
 
@@ -71,19 +116,18 @@ A production-oriented core-banking backend built around PostgreSQL as the source
 <td width="50%" valign="top">
 
 ### 🚗 RentFlow
+**A car-rental booking platform designed around booking correctness.**
 
-**A car-rental marketplace designed around booking correctness.**
-
-A full-stack product where availability, booking, payment, and trip workflows are treated as stateful business processes rather than CRUD screens.
+Availability, booking, payment and trip workflows treated as stateful business processes rather than CRUD screens.
 
 **Engineering focus**
 - Double-booking prevention
 - Pessimistic availability locking
 - Idempotent booking creation
-- Payment lifecycle safety
-- Explicit state transitions
-- JWT / RBAC boundaries
+- JWT / RBAC + refresh-token rotation
+- Rate limiting
 - Transactional outbox
+- Actuator / Prometheus metrics
 - PostgreSQL integration testing
 
 **Stack**
@@ -106,25 +150,9 @@ A full-stack product where availability, booking, payment, and trip workflows ar
 |---|---|---|
 | 💰 | **Correctness before convenience** | Money and transactional state live in an authoritative store, not in caches or message queues. |
 | 🔁 | **Retries are part of the API** | Idempotency and recovery behavior are designed before a failure reaches production. |
-| ⚔️ | **Concurrency is a product problem** | Booking the same car twice or spending the same balance twice is not just a database detail. |
-| 🔎 | **Observe the failure, not only the uptime** | Metrics, traces, logs, and runbooks should explain *why* a system degraded. |
+| 📈 | **A claim isn't real until it runs** | Self-healing, HPA and rollback are verified on a live cluster, with the evidence committed. |
+| 🔎 | **Observe the failure, not only the uptime** | Metrics, traces, logs and runbooks should explain *why* a system degraded. |
 | 🧩 | **Architecture follows pressure** | I prefer the smallest architecture that preserves the required guarantees. |
-
----
-
-## Verified platform work
-
-```text
-CoreBank — runtime-verified, with evidence in the repo
-  ├─ OpenShift (Developer Sandbox) under restricted-v2 · Route · HPA · rollback
-  ├─ Kubernetes on Kind · probes · PDB · rolling update · failed-rollout recovery
-  ├─ OpenTelemetry → Dynatrace · JDBC spans · 45 s row-lock RCA
-  └─ Istio 1.31 · canary · STRICT mTLS · rollback
-
-Next: Dynatrace Operator (DynaKube) · OpenShift Service Mesh · NetworkPolicy
-```
-
-Every item above was executed against a live cluster and captured in the repository — not read about.
 
 ---
 
@@ -132,21 +160,31 @@ Every item above was executed against a live cluster and captured in the reposit
 
 <div align="center">
 
-### Backend & product
+**Platform & Operations**
 
-<img src="https://skillicons.dev/icons?i=java,spring,ts,nextjs,react" alt="Backend and frontend stack" />
-
-### Data & infrastructure
-
-<img src="https://skillicons.dev/icons?i=postgres,mysql,redis,docker,kubernetes,linux,githubactions,git" alt="Data and infrastructure stack" />
-
+<img src="https://skillicons.dev/icons?i=kubernetes,docker,linux,githubactions,git,cloudflare" alt="Platform and operations stack" />
 <br />
-
-<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
 <img src="https://img.shields.io/badge/OpenShift-EE0000?style=flat-square&logo=redhatopenshift&logoColor=white" alt="OpenShift" />
-<img src="https://img.shields.io/badge/Dynatrace-1496FF?style=flat-square&logo=dynatrace&logoColor=white" alt="Dynatrace" />
 <img src="https://img.shields.io/badge/Istio-466BB0?style=flat-square&logo=istio&logoColor=white" alt="Istio" />
+<img src="https://img.shields.io/badge/Kustomize-326CE5?style=flat-square&logo=kubernetes&logoColor=white" alt="Kustomize" />
+<img src="https://img.shields.io/badge/Trivy-1904DA?style=flat-square&logo=aquasecurity&logoColor=white" alt="Trivy" />
+<img src="https://img.shields.io/badge/Cloudflare%20Workers%20%2F%20D1-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Cloudflare Workers and D1" />
+
+**Observability / APM**
+
+<img src="https://img.shields.io/badge/Dynatrace-1496FF?style=flat-square&logo=dynatrace&logoColor=white" alt="Dynatrace" />
+<img src="https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white" alt="OpenTelemetry" />
+<img src="https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white" alt="Prometheus" />
+<img src="https://img.shields.io/badge/Grafana-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Grafana" />
+<img src="https://img.shields.io/badge/Tempo-F46800?style=flat-square&logo=grafana&logoColor=white" alt="Tempo" />
+<img src="https://img.shields.io/badge/Micrometer-117AC9?style=flat-square" alt="Micrometer" />
+
+**Backend & Data**
+
+<img src="https://skillicons.dev/icons?i=java,spring,postgres,mysql,redis,ts,nextjs" alt="Backend and data stack" />
+<br />
 <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka" />
+<img src="https://img.shields.io/badge/Flyway-CC0200?style=flat-square&logo=flyway&logoColor=white" alt="Flyway" />
 <img src="https://img.shields.io/badge/Testcontainers-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Testcontainers" />
 
 </div>
@@ -155,9 +193,7 @@ Every item above was executed against a live cluster and captured in the reposit
 
 ## What I'm optimizing for
 
-Not the largest number of frameworks.
-
-I'm trying to become the engineer who can follow one production problem all the way through:
+Not the largest number of frameworks — the ability to follow **one production problem all the way through**:
 
 ```text
 business symptom
@@ -175,10 +211,30 @@ root cause
 safe recovery
 ```
 
+---
+
+## Education & certifications
+
+**FPT University** — B.S. in Software Engineering · `2022 – 2026`
+Program completed; diploma pending issuance.
+
+- **Red Hat** — Cloud-Native Development with OpenShift and Kubernetes Specialization *(Coursera)*
+- **IBM** — Java Developer Professional Certificate
+- **University of Minnesota** — Software Development Lifecycle Specialization *(Coursera)*
+- English — proficient in technical reading and writing
+
+---
+
 <div align="center">
 
 ### Build the system. Break the assumptions. Understand the failure.
 
-<sub>Hanoi, Vietnam · Open to observability/APM, platform &amp; DevOps, and Java backend engineering roles.</sub>
+**Open to Platform/DevOps, Observability/APM and Java Backend roles — Hanoi or remote.**
+
+<a href="mailto:huyhoang59204@gmail.com">
+  <img src="https://img.shields.io/badge/Email-huyhoang59204%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+</a>
+
+<sub>Hanoi, Vietnam · Banking & financial-services platform and APM work welcome.</sub>
 
 </div>
