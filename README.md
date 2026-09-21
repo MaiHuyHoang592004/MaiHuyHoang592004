@@ -32,7 +32,7 @@
 
 ## In one paragraph
 
-Software engineer with hands-on **production operations** experience on two internal systems: I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and I built a **financial reconciliation platform** together with the accounting team. I own releases, database migrations and runtime troubleshooting across managed hosting and **Cloudflare Workers + D1**. On top of that, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repository — and I'm looking to deliver container-platform and APM solutions for **banking and financial-services** clients.
+Software engineer with hands-on **production operations** experience on two internal systems: I took over an outsourced fulfillment platform and adapted it for multi-workshop operations, and I built a **financial reconciliation platform** together with the accounting team. I own releases, database migrations and runtime troubleshooting across managed hosting and **Cloudflare Workers + D1**. On top of that, I have **runtime-verified Kubernetes / OpenShift and Dynatrace / OpenTelemetry** work with evidence in the repository 
 
 ---
 
@@ -213,17 +213,6 @@ safe recovery
 
 ---
 
-## Education & certifications
-
-**FPT University** — B.S. in Software Engineering · `2022 – 2026`
-Program completed; diploma pending issuance.
-
-- **Red Hat** — Cloud-Native Development with OpenShift and Kubernetes Specialization *(Coursera)*
-- **IBM** — Java Developer Professional Certificate
-- **University of Minnesota** — Software Development Lifecycle Specialization *(Coursera)*
-- English — proficient in technical reading and writing
-
----
 
 <div align="center">
 
